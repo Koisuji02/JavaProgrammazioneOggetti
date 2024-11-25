@@ -1,0 +1,35 @@
+
+1.  L'ereditarietà tra due classi permette di
+[ ] A1.1 - rimuovere attributi
+[ ] A1.2 - aggiungere attributi
+[ ] A1.3 - rimuovere metodi
+[ ] A1.4 - ridefinire metodi
+[ ] A1.5 - aggiungere metodi
+
+
+2. Per ottenere un ordinamento naturale degli oggetti di una classe che cosa serve fare?
+[ ] A2.1 - implementare l'interfaccia Comparable
+[ ] A2.2 - definire il metodo compare
+[ ] A2.3 - definire il metodo compareTo
+[ ] A2.4 - ridefinire il metodo equals
+[ ] A2.5 - ridefinire il metodo hashCode
+
+
+3. Un errore (rispetto a failure) di un test JUnit:
+[ ] A3.1 - corrisponde ad una asserzione falsa
+[ ] A3.2 - corrisponde ad una eccezione lanciata dal programma testato 
+[ ] A3.3 - non puo' corrispondere ad una linea con un assert
+[ ] A3.4 - corrisponde ad throw nel programma testato
+[ ] A3.5 - corrisponde al metodo fail()
+
+
+4.  Per l'associazione Account --(like)—- Post che descrive parte di un social media, 
+	che molteplicità si deve mettere vicino alla classe Account in UML?
+[ ] A4.1 - 0,1
+[ ] A4.2 - 0,*
+[ ] A4.3 - 1,1
+[ ] A4.4 - 1,*
+[ ] A4.5 - *,*
+
+
+Per selezionare una risposta inserire una "X" tra le "[ ]" --> "[X]"

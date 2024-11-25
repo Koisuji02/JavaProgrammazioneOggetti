@@ -1,0 +1,33 @@
+1. Se ad un parametro Integer si passa un valore int:
+[ ] A1.1 - si verifica un errore di type mismatch
+[ ] A1.2 - viene passato il valore int
+[ ] A1.3 - viene passato un riferimento al valore int
+[ ] A1.4 - viene passato un oggetto Integer
+[ ] A1.5 - viene fatto un cast a Integer
+
+
+2. Lo scopo dell'operatore `->` è:
+[ ] A2.1 - definire un'espressione condizionale
+[ ] A2.2 - definire una assegnazione inversa
+[ ] A2.3 - definire un parametro generico sfruttando la type inference
+[ ] A2.4 - definire un *method reference*
+[ ] A2.5 - estendere una classe
+
+
+3. Il metodo `assertEquals()` in JUnit può accettare:
+[ ] A3.1 - 1 parametro per tutti i confronti
+[ ] A3.2 - 2 parametri per tutti i confronti 
+[ ] A3.3 - 3 parametri per tutti i confronti
+[ ] A3.4 - 4 parametri per tutti i confronti
+[ ] A3.5 - 4 parametri solo per confronti di floating point
+
+
+4. Quando tutti i test passano su programma significa che
+[ ] A4.1 - è corretto
+[ ] A4.2 - non contiene difetti
+[ ] A4.3 - è errato
+[ ] A4.4 - contiene difetti
+[ ] A4.5 - probabilmente contiene pochi difetti
+
+
+Per selezionare una risposta inserire una "X" tra le "[ ]" --> "[X]"

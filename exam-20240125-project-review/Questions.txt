@@ -1,0 +1,35 @@
+
+1.  Which among the following statements are valid for the `static` modifier?
+[ ] A1.1 - For a method it means that it cannot access any attribute in any class
+[ ] A1.2 - For a method it means that it can only access static attributes in any class
+[ ] A1.3 - For a class it means that it can access the container object attributes
+[ ] A1.4 - For a class it means that it cannot access the container object attributes
+[ ] A1.5 - For a field it means that every object has its own copy
+
+
+2. What is required to get the natural ordering of the objects of a class?
+[ ] A2.1 - implement interface Comparable
+[ ] A2.2 - define method compare
+[ ] A2.3 - define method compareTo
+[ ] A2.4 - redefine method equals
+[ ] A2.5 - redefine method hashCode
+
+
+3. An error (as opposed to a failure) in a test JUnit:
+[ ] A3.1 - corresponds to a false assertion
+[ ] A3.2 - corresponds to an exception thrown by the tested program 
+[ ] A3.3 - cannot correspond to a line with an assert
+[ ] A3.4 - corresponds to throw in the tested program
+[ ] A3.5 - corresponds to method fail()
+
+
+4.  For the association Account --(like)—- Post describing part of a social media, 
+	what multiplicity needs to be written close to Account class in UML?
+[ ] A4.1 - 0,1
+[ ] A4.2 - 0,*
+[ ] A4.3 - 1,1
+[ ] A4.4 - 1,*
+[ ] A4.5 - *,*
+
+
+To select an answer place a "X" in the "[ ]" --> "[X]"

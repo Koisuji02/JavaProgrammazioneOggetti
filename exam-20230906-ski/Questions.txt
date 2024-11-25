@@ -1,0 +1,33 @@
+1. When you pass an int value to an Integer parameter:
+[ ] A1.1 - there is a type mismatch error
+[ ] A1.2 - the int value is passed
+[ ] A1.3 - a reference to the int value is passed
+[ ] A1.4 - an Integer object is passed
+[ ] A1.5 - a cast to Integer is performed
+
+
+2. The purpose of the operator `->` is to:
+[ ] A2.1 - define a conditional expression
+[ ] A2.2 - define a reverse assignment
+[ ] A2.3 - define generic parameter using type inference
+[ ] A2.4 - define *method reference*
+[ ] A2.5 - extend a class
+
+
+3. The method `assertEquals()` in JUnit can accept:
+[ ] A3.1 - 1 parameter for any comparison
+[ ] A3.2 - 2 parameters for any comparison
+[ ] A3.3 - 3 parameters for any comparison
+[ ] A3.4 - 4 parameters for any comparison
+[ ] A3.5 - 4 parameters for floating point comparisons only
+
+
+4. When all tests pass on a program it means that the program
+[ ] A4.1 - is correct
+[ ] A4.2 - does not contain defects
+[ ] A4.3 - is wrong
+[ ] A4.4 - contains defects
+[ ] A4.5 - likely contains few defects 
+
+
+To select an answer place a "X" in the "[ ]" --> "[X]"

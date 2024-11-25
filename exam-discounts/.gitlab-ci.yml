@@ -1,0 +1,22 @@
+variables:
+  MAVEN_OPTS: >-
+    -Dhttps.protocols=TLSv1.2
+    -Dorg.slf4j.simpleLogger.showDateTime=true
+    -Djava.awt.headless=true
+
+  MAVEN_CLI_OPTS: >-
+    --batch-mode
+    --fail-at-end
+    --show-version
+
+verify:
+  stage: test
+  tags:
+    - oop
+  script:
+    - 'mvn $MAVEN_CLI_OPTS test'
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml

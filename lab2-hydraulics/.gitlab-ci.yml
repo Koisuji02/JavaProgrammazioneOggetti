@@ -1,0 +1,25 @@
+variables:
+  MAVEN_OPTS: >-
+    -Dhttps.protocols=TLSv1.2
+    -Djava.awt.headless=true
+    -XX:+DisableAttachMechanism
+
+  MAVEN_CLI_OPTS: >-
+    --batch-mode
+    --errors
+    --fail-at-end
+    --show-version
+    --no-transfer-progress
+
+verify:
+  stage: test
+  tags:
+    - oop
+  script:
+    - 'mvn $MAVEN_CLI_OPTS test'
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+

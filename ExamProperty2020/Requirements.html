@@ -1,0 +1,167 @@
+<html>
+
+<head>
+<title>Requirements</title>
+<style type="text/css">
+<!--
+body {
+	margin: 0.5cm;
+	/*
+	font-size: 13px;
+	*/
+	}
+p   {
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+    }
+b   {
+	font-family: "Courier New";
+	color: MidnightBlue;
+	background: #f8f8f8;
+	border-radius: 2pt;
+	padding: 1pt;
+/*
+    font-size=85%;
+	border: 1pt dotted silver;
+*/
+	}
+	
+i   {
+	color: Navy;
+	font-family: "Courier New";
+	}
+	
+h1  {
+	font-family: sans-serif;
+	text-align: center;
+    line-height: 1.1em;
+	}
+	
+h2  {
+	color: RoyalBlue;
+	font-family: sans-serif;
+	border-top: 1px dotted gray;
+	}
+.hint {
+    color:LightSlateGray;
+    margin-left:10ch;
+    margin-right:10ch;
+    text-indent:-5ch;
+    }
+.hint b {
+	font-family: inherit;
+	color: MidnightBlue;
+	background: inherit;
+	border-radius: inherit;
+	padding: inherit;
+    }
+.hint i {
+	color: gray;
+    }
+
+@media print {
+body {
+	font-size: 10pt;
+	}
+
+  h2 {
+  	float:left;
+    margin-top: 0;
+    padding: 5px 15px 5px 0px;
+    line-height: 0.8em;
+  	}
+}
+table {
+	float: right;
+	margin: 20px;
+	border-collapse:collapse;
+	border-bottom: 1px solid Navy;
+	border-top: 1px solid Navy;
+	}
+td, th  {
+	padding: 1px 5px 1px 5px;
+	}
+tr:nth-child(even) {
+    background-color: PowderBlue;
+    margin: 1pt solid PowderBlue;
+}
+-->
+</style>
+</head>
+
+<body lang=IT >
+
+<h1>Property Management</h1>
+
+A property manager receives requests for intervention from the owners and dispatches them to suitable professional workers.
+<p>The main class is <b>PropertyManager</b>; all the classes are contained in the package <b>managingProperties</b>.
+The class <b>Example</b> provides usage examples for the main methods.
+<p> 
+
+<p>The <a href="http://softeng.polito.it/courses/docs/api/index.html"
+target="_blank">JDK documentation</a> can be found on a local server.</p>
+
+<h2>R1: Buildings, apartments and owners</h2>
+
+The following methods allow the registration of the buildings in the system, together with the number of apartments and users.
+<br>
+The method <b>addBuilding()</b> accepts the (unique) id of the building (e.g. <i>"b1"</i>) and the number of its apartments, 
+and records them.
+It throws an exception if the id has already been used or if the number is not in the range 1 to 100.
+<br>The method <b>addOwner()</b> accepts the (unique) id of the owner and the list of her apartments and record them.
+An apartment is identified by means of a string containing the id of the building and the number of the apartment, separated by ":"
+(e.g. <i>"b1:10"</i>).
+It throws an exception if the id of the owner has already been defined, the id of the building does not exist, the
+number does not correspond to an apartment, or the apartment already has an owner.
+<br>
+The method <b>getBuildings()</b> returns a sorted map that groups by number of apartments the lists of buildings sorted alphabetically. 
+
+
+<h2>R2: Professionals</h2>
+
+The method <b>addProfessionals()</b> accepts the name of the profession (type of work) and the list of the ids of the
+relative professional workers.
+The professions used in the examples are electrician, plumber, mason (elettricista, idraulico, muratore).
+It throws an exception if the same profession has already been used in a previous invocation or if
+a worker's id has already been used: a worker can exercise a single profession only.
+<p>
+The method <b>getProfessions()</b> returns an ordered map of the professions (sorted alphabetically) and the
+corresponding number of workers.
+
+
+<h2>R3: Maintenance requests</h2>
+The method <b>addRequest()</b> accepts the id of the owner, the id of the apartment (e.g. <i>"b1:10"</i>),
+and the name of the profession; it generates a new request in the <i>pending</i> state and returns the number of the request.
+The requests are assigned a progressive number starting at 1.
+The method throws an exception if the owner, the apartment, or the profession do not exist, 
+or if the owner does not own the apartment.
+<p>
+The method <b>assign()</b> assigns the request (whose number is provided as an argument) to the given professional worker
+and changes its status to <i>assigned</i>.
+It throws and exception if the worker does not exercise the profession required by the request, 
+the request does not exits, or it is not in the pending state anymore.
+<p>
+The method <b>getAssignedRequests()</b> returns the list of the request numbers in ascending orders.
+
+
+<h2>R4: Charges</h2>
+To charge the expenses of a maintainance activity, the method <b>charge()</b> is used, it accepts the request number and
+the expenses sum (an integer number) and turns the request state into <i>completed</i>.
+It throws an exception if the requests does not exits, it is not in the assigned state, the sum is not in the 0 to 1000 range.
+<p>
+The method <b>getCompletedRequests()</b> returns the list of completed request numbers (i.e. in the completed state) in ascending order.
+
+
+<h2>R5: Statistics</h2>
+
+The methods <b>getCharges()</b> returns for each owner the sum of the relative completed requests.
+Only the owner with non null expenses are considered.
+<p>
+The method <b>getChargesOfBuildings()</b> returns, grouped by building, the sum of expenses by profession. 
+Both buildings and  professions are reported in alphabetic order. 
+Only buildings and professions with non null expenses are considered
+
+
+</body>
+
+</html>
